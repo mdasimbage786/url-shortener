@@ -1328,7 +1328,10 @@
     let showAnalytics = false;
     let copiedTimeout;
 
-    const API_BASE_URL = 'http://localhost:8080/api/url';
+    const API_BASE_URL = window.location.hostname === 'localhost'
+  ? 'http://localhost:8080/api/url'
+  : 'https://url-shortener-1-zlrh.onrender.com/api/url';
+
 
     // Initialize the app
     document.addEventListener('DOMContentLoaded', function() {
